@@ -1,0 +1,86 @@
+/* CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+body {
+  background: linear-gradient(
+    to right bottom,
+    rgb(55, 124, 192),
+    rgba(13, 179, 132, 0.815)
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h2 {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  text-decoration: underline;
+  color: rgba(185, 240, 232, 0.792);
+}
+.blur {
+  position: absolute;
+  filter: blur(22px);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 105, 98, 0.298);
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.tab-container {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(44, 156, 156, 0.646);
+  background-color: rgba(21, 151, 73, 0.019);
+  box-shadow: 3px 0px 57px rgba(2, 58, 55, 0.405);
+}
+button {
+  font-size: 20px;
+  width: 180px;
+  padding: 20px;
+  float: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(39, 189, 144, 0.896);
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: rgba(39, 132, 118, 0.956);
+}
+.tab-content {
+  text-align: center;
+  padding: 20px;
+  padding-top: 105px;
+  height: 400px;
+  box-sizing: border-box;
+  display: none;
+  color: rgba(196, 228, 214, 0.726);
+  width: 700px;
+  animation: OpacityEffect 0.5s ease-in;
+}
+@keyframes OpacityEffect {
+  from {
+    opacity: 0;
+    padding: 30px;
+  }
+  to {
+    opacity: 1;
+  }
+}
